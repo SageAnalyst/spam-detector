@@ -12,9 +12,14 @@ from nltk.corpus import stopwords
 nltk.download("punkt")
 
 # Load models
-model = joblib.load("/Users/clean/spam-detector/spam_detection_model_compressed.pkl")
-vectorizer = joblib.load("/Users/clean/spam-detector/tfidf_vectorizer.pkl")
-scaler = joblib.load("/Users/clean/spam-detector/scaler.pkl")
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+model = joblib.load(os.path.join(BASE_DIR, "spam_detection_model_compressed.pkl"))
+vectorizer = joblib.load(os.path.join(BASE_DIR, "tfidf_vectorizer.pkl"))
+scaler = joblib.load(os.path.join(BASE_DIR, "scaler.pkl"))
+
 
 # Preprocessing
 ps = PorterStemmer()
