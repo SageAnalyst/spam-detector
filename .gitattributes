@@ -1,0 +1,2 @@
+*.pkl filter=lfs diff=lfs merge=lfs -text
+spam_detection_model.pkl filter=lfs diff=lfs merge=lfs -text
