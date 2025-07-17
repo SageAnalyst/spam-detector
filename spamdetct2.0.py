@@ -129,7 +129,7 @@ print("Classification report:\n", classification_report(y_test, y_pred))
 print("Confusion matrix:\n", confusion_matrix(y_test, y_pred))
 
 # Save models
-joblib.dump(voting_clf, "spam_detection_model.pkl")
+joblib.dump(voting_clf, "spam_detection_model_compressed.pkl", compress=4)
 joblib.dump(tfidf_vect, "tfidf_vectorizer.pkl")
 joblib.dump(scaler, "scaler.pkl")
 

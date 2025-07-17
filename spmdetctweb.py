@@ -8,7 +8,7 @@ from nltk.stem import PorterStemmer
 from scipy.sparse import hstack
 
 # Load models
-model = joblib.load("spam_detection_model.pkl")
+model = joblib.load("spam_detection_model_compressed.pkl")
 vectorizer = joblib.load("tfidf_vectorizer.pkl")
 scaler = joblib.load("scaler.pkl")
 
