@@ -6,6 +6,10 @@ import re
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
 from scipy.sparse import hstack
+import nltk
+nltk.download("stopwords")
+from nltk.corpus import stopwords
+nltk.download("punkt")
 
 # Load models
 model = joblib.load("spam_detection_model_compressed.pkl")
